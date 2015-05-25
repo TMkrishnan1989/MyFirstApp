@@ -1,0 +1,906 @@
+﻿body {
+
+}
+
+#loginLinkIn {
+    float: left;
+    overflow: hidden;
+    padding: 2px 0 0 32px;
+    text-align: left;
+    width: 330px;
+}
+
+/*.login-linkedin a.new {
+    background: url("/img/connect_linkedin1.png") no-repeat scroll left top transparent;
+}
+.login-linkedin a {
+    display: block;
+    height: 42px;
+    text-indent: -99999px;
+    width: 139px;
+}
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}*/
+
+/* Theme 3 - Scheme1 - Profile Info */
+
+.Template3_Scheme1_Profile
+{
+	background-color:#4A3313;
+	float:left;
+}
+
+#Websites
+{
+	float:left;
+	padding-top:15px;
+}
+#Websites a
+{
+	float:none !important;
+}
+.Template1_Scheme_Profile_ContactDetails #divEmailAddress
+{
+	padding-top:10px;
+	color:#fff;
+}
+.Template1_Scheme_Profile_ContactDetails #divDOB
+{
+	color:#fff;
+}
+.Template1_Scheme_Profile_ContactDetails #contact
+{
+	padding-top:10px;
+	float:left;
+	width:100%;
+	color:#fff;
+}
+.Template1_Scheme_Profile_ContactDetails #Phone
+{
+	float:left;
+	width:100%;
+	color:#fff;
+}
+.Template3_Scheme1_Profile .Template1_Scheme_Profile_CandidateName
+{
+	
+	font-size:55pt;
+	color:#66aa44;
+	float:left;
+	width:100%;
+	padding-top:10px;
+}
+.Template3_Scheme1_Profile .Template1_Scheme_Profile_Exprience
+{
+	
+	font-size:35px;
+	color:#fff;
+	float:left;
+	width:100%;
+	padding-left:2px;
+}
+#Photo
+{
+	float:left;
+	width:80px;
+	height:80px;
+	padding-top:15px;
+}
+.Template3_Scheme1_Profile .Template1_Scheme_Profile_About
+{
+	
+	font-size:16px;
+	color:#cbcccc;
+	float:left;
+	width:85%;
+	margin-left:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.Template3_Scheme1_Profile .Template1_Scheme_Profile_ContactDetails
+{
+	
+	font-size: 14px;
+	color:#CBCCCC;
+}
+
+/* Theme 1 - Scheme1 - Work Experience*/
+.Template3_Scheme1_Work_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Work_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#000;
+}
+.Template3_Scheme1_Work_display
+{
+	background-color: #4A3313;
+}
+.Template3_Scheme1_Work_Details_Header
+{
+	
+	font-size:30px;
+	color:#64AB45;
+	background-color:#4A3313;
+}
+.Template3_Scheme1_Work_Details
+{
+	
+	font-size: 14px;
+	color:#666;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme1 - Education */
+.Template3_Scheme1_Education_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Education_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#000;
+}
+.Template3_Scheme1_Education_display
+{
+	background-color: #64AB45;
+}
+.Template3_Scheme1_Education_line
+{
+	background-color: #4A3313;
+}
+.Template3_Scheme1_Education_Details_Header
+{
+	
+	font-size:24px;
+	color:#64AB45;
+	font-weight:400;
+	background-color:#4A3313;
+}
+.Template3_Scheme1_Education_Details
+{
+	
+	font-size:16px;
+	color:#808080;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme1 - Skills */
+.Template3_Scheme1_Skill_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Skill_OuterCircle
+{
+	background-color:#aaddee;
+}
+.Template3_Scheme1_Skill_InnerCircle
+{
+	
+	font-size:72px; font-weight:normal;
+	background-color: #FFF;
+	color:#FFF;
+}
+.Template3_Scheme1_Skill_HighLighter
+{
+	background-color: #66aa44;
+}
+.Template3_Scheme1_Skill_Details_Header
+{
+	
+	font-size:25px;
+	color:#66aa44;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme1 - Interests */
+.Template3_Scheme1_Interest_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Interest_Normal
+{
+	background-color:#4a3313;
+}
+.Template3_Scheme1_Interest_Selected
+{
+	background-color: #64AB45;
+}
+.Template3_Scheme1_Interest_Details_Header
+{
+	
+	font-size:18px;
+	color:#64AB45;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme1 - Language */
+.Template3_Scheme1_Language_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Language_Normal
+{
+	background-color:#AADDEE;
+}
+.Template3_Scheme1_Language_Selected
+{
+	background-color: #64AB45;
+}
+.Template3_Scheme1_Language_Details_Header
+{
+	
+	font-size:18px;
+	color:#66aa44;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme1 - Awards */
+.Template3_Scheme1_Award_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#64AB45;
+	background-color:#64AB45;
+}
+.Template3_Scheme1_Award_BackColor
+{
+	background-color:#AADDEE;
+}
+.Template3_Scheme1_Award_FrontColor
+{
+	background-color: #64AB45;
+}
+.Template3_Scheme1_Award_Details_Header
+{
+	
+	font-size:22px;
+	color:#fff;
+	font-weight:800;
+	background-color: #4a3313;
+}
+
+/* Theme 1 - Scheme1 - Recommendation */
+.Template3_Scheme1_Recommendation
+{
+	width:100%;
+	float:left;
+	/*background-color:#64AB45;*/
+}
+
+.Template3_Scheme1_Recommendation .Template1_Scheme_Recommendations_Title
+{
+	
+	font-size:40px; font-weight:400;
+	color:#66aa44;
+	float:left;
+	width: 99%;
+	padding:10px 0px 10px 10px;
+	text-transform:uppercase;
+	border-bottom: 2px solid #66aa44;
+}
+.Template3_Scheme1_Recommendation .Template1_Scheme_Recommendations_Left
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme1_Recommendation .Template1_Scheme_Recommendations_Right
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme1_Recommendation .Template1_Scheme_Recommendations_Left_Name
+{
+	padding-top:10px;
+}
+.Template3_Scheme1_Recommendation .Template1_Scheme_Recommendations_Right_Name
+{
+	padding-top:10px;
+}
+/*******************************************************************************************************/
+
+/* Theme 1 - Scheme2 - Profile Info */
+#dummyColor1PatternTwo
+{
+	background-color:#004962;
+}
+#dummyColor2PatternTwo
+{
+	background-color:#DE4412;
+}
+#dummyColor3PatternTwo
+{
+	background-color:#CBCDCC;
+}
+
+.Template3_Scheme2_Profile
+{
+	background-color:#004962;
+	float:left;
+}
+
+.Template3_Scheme2_Profile .Template3_Scheme_Profile_Welcome
+{
+	
+	float: right; 
+	font-weight:bold;
+	color:#AC1838;
+}
+
+.Template3_Scheme2_Profile .Template1_Scheme_Profile_CandidateName
+{
+	
+	font-size:55pt;
+	color:#DE4412;
+	float:left;
+	width:100%;
+	padding-top:10px;
+}
+.Template3_Scheme2_Profile .Template1_Scheme_Profile_Exprience
+{
+	
+	font-size:35px;
+	color:#fff;
+	float:left;
+	width:100%;
+	padding-left:2px;
+}
+.Template3_Scheme2_Profile .Template1_Scheme_Profile_About
+{
+	
+	font-size:16px;
+	color:#cbcccc;
+	float:left;
+	width:85%;
+	margin-left:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.Template3_Scheme2_Profile .Template1_Scheme_Profile_ContactDetails
+{
+	
+	font-size: 14px;
+	color:#CBCCCC;
+}
+
+/* Theme 1 - Scheme2 - Work Experience*/
+.Template3_Scheme2_Work_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Work_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#000;
+}
+.Template3_Scheme2_Work_display
+{
+	background-color: #004962;
+}
+.Template3_Scheme2_Work_Details_Header
+{
+	
+	font-size:30px;
+	color:#dd4411;
+	background-color:#003344;
+}
+.Template3_Scheme2_Work_Details
+{
+	
+	font-size: 14px;
+	color:#666;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme2 - Education */
+.Template3_Scheme2_Education_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Education_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#666;
+}
+.Template3_Scheme2_Education_display
+{
+	background-color: #DD4726;
+}
+.Template3_Scheme2_Education_line
+{
+	background-color: #004962;
+}
+.Template3_Scheme2_Education_Details_Header
+{
+	
+	font-size:24px;
+	color:#DD4726;
+	font-weight:400;
+	background-color:#003344;
+}
+.Template3_Scheme2_Education_Details
+{
+	
+	font-size:16px;
+	color:#808080;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme2 - Skills */
+.Template3_Scheme2_Skill_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Skill_OuterCircle
+{
+	background-color:#cbcccc;
+}
+.Template3_Scheme2_Skill_InnerCircle
+{
+	
+	font-size:72px; font-weight:normal;
+	background-color: #FFF;
+	color:#FFF;
+}
+.Template3_Scheme2_Skill_HighLighter
+{
+	background-color: #dd4411;
+}
+.Template3_Scheme2_Skill_Details_Header
+{
+	
+	font-size:25px;
+	color:#dd4411;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme2 - Interests */
+.Template3_Scheme2_Interest_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Interest_Normal
+{
+	background-color:#003344;
+}
+.Template3_Scheme2_Interest_Selected
+{
+	background-color: #dd4411;
+}
+.Template3_Scheme2_Interest_Details_Header
+{
+	
+	font-size:18px;
+	color:#dd4411;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme2 - Language */
+.Template3_Scheme2_Language_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Language_Normal
+{
+	background-color:#CBCDCC;
+}
+.Template3_Scheme2_Language_Selected
+{
+	background-color: #dd4411;
+}
+.Template3_Scheme2_Language_Details_Header
+{
+	
+	font-size:18px;
+	color:#dd4411;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme2 - Awards */
+.Template3_Scheme2_Award_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#DD4726;
+	background-color:#DD4726;
+}
+.Template3_Scheme2_Award_BackColor
+{
+	background-color:#004962;
+}
+.Template3_Scheme2_Award_FrontColor
+{
+	background-color: #DD4726;
+}
+.Template3_Scheme2_Award_Details_Header
+{
+	
+	font-size:22px;
+	color:#fff;
+	font-weight:800;
+	background-color: #003344;
+}
+
+/* Theme 1 - Scheme2 - Recommendation */
+.Template3_Scheme2_Recommendation
+{
+	width:100%;
+	float:left;
+	/*background-color:#004962;*/
+}
+
+.Template3_Scheme2_Recommendation .Template1_Scheme_Recommendations_Title
+{
+	
+	font-size:40px; font-weight:400;
+	color:#dd4411;
+	float:left;
+	width: 97%;
+	padding:10px 0px 10px 10px;
+	text-transform:uppercase;
+	border-bottom: 2px solid #dd4411;
+}
+.Template3_Scheme2_Recommendation .Template1_Scheme_Recommendations_Left
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme2_Recommendation .Template1_Scheme_Recommendations_Right
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme2_Recommendation .Template1_Scheme_Recommendations_Left_Name
+{
+	padding-top:10px;
+}
+.Template3_Scheme2_Recommendation .Template1_Scheme_Recommendations_Right_Name
+{
+	padding-top:10px;
+}
+
+/******************************************************************************************************************/
+/* Theme 1 - Scheme3 - Profile Info */
+#dummyColor1PatternThree
+{
+	background-color:#4A3108;
+}
+#dummyColor2PatternThree
+{
+	background-color:#10A0A0;
+}
+#dummyColor3PatternThree
+{
+	background-color:#BBBC00;
+}
+
+.Template3_Scheme3_Profile
+{
+	background-color:#4A3108;
+	float:left;
+}
+
+.Template3_Scheme3_Profile .Template3_Scheme_Profile_Welcome
+{
+	
+	float: right; 
+	font-weight:bold;
+	color:#AC1838;
+}
+
+.Template3_Scheme3_Profile .Template1_Scheme_Profile_CandidateName
+{
+	
+	font-size:55pt;
+	color:#bbbb00;
+	float:left;
+	width:100%;
+	padding-top:10px;
+}
+.Template3_Scheme3_Profile .Template1_Scheme_Profile_Exprience
+{
+	
+	font-size:35px;
+	color:#fff;
+	float:left;
+	width:100%;
+	padding-left:2px;
+}
+.Template3_Scheme3_Profile .Template1_Scheme_Profile_About
+{
+	
+	font-size:16px;
+	color:#cbcccc;
+	float:left;
+	width:85%;
+	margin-left:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.Template3_Scheme3_Profile .Template1_Scheme_Profile_ContactDetails
+{
+	
+	font-size: 14px;
+	color:#CBCCCC;
+}
+
+/* Theme 1 - Scheme3 - Work Experience*/
+.Template3_Scheme3_Work_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Work_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#000;
+}
+.Template3_Scheme3_Work_display
+{
+	background-color: #10A0A0;
+}
+.Template3_Scheme3_Work_Details_Header
+{
+	
+	font-size:30px;
+	color:#10A0A0;
+	background-color:#4b3107;
+}
+.Template3_Scheme3_Work_Details
+{
+	
+	font-size: 14px;
+	color:#666;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme3 - Education */
+.Template3_Scheme3_Education_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Education_TimeLine
+{
+	
+	font-size:12px;
+	background-color:#666;
+	color:#000;
+}
+.Template3_Scheme3_Education_display
+{
+	background-color: #10A0A0;
+}
+.Template3_Scheme3_Education_line
+{
+	background-color: #4A3108;
+}
+.Template3_Scheme3_Education_Details_Header
+{
+	
+	font-size:24px;
+	color:#10A0A0;
+	font-weight:400;
+	background-color:#4A3108;
+}
+.Template3_Scheme3_Education_Details
+{
+	
+	font-size:16px;
+	color:#808080;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme3 - Skills */
+.Template3_Scheme3_Skill_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Skill_OuterCircle
+{
+	background-color:#bbbb00;
+}
+.Template3_Scheme3_Skill_InnerCircle
+{
+	
+	font-size:72px; font-weight:normal;
+	background-color: #FFF;
+	color:#FFF;
+}
+.Template3_Scheme3_Skill_HighLighter
+{
+	background-color: #009999;
+}
+.Template3_Scheme3_Skill_Details_Header
+{
+	
+	font-size:25px;
+	color:#009999;
+	font-weight:400;
+}
+
+/* Theme 1 - Scheme3 - Interests */
+.Template3_Scheme3_Interest_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Interest_Normal
+{
+	background-color:#4b3107;
+}
+.Template3_Scheme3_Interest_Selected
+{
+	background-color: #009999;
+}
+.Template3_Scheme3_Interest_Details_Header
+{
+	
+	font-size:18px;
+	color:#009999;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme3 - Language */
+.Template3_Scheme3_Language_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Language_Normal
+{
+	background-color:#BBBC00;
+}
+.Template3_Scheme3_Language_Selected
+{
+	background-color: #10A0A0;
+}
+.Template3_Scheme3_Language_Details_Header
+{
+	
+	font-size:18px;
+	color:#10A0A0;
+	font-weight:800;
+}
+
+/* Theme 1 - Scheme3 - Awards */
+.Template3_Scheme3_Award_header
+{
+	
+	font-size:40px; font-weight:400;
+	color:#10A0A0;
+	background-color:#10A0A0;
+}
+.Template3_Scheme3_Award_BackColor
+{
+	background-color:#BBBC00;
+}
+.Template3_Scheme3_Award_FrontColor
+{
+	background-color: #10A0A0;
+}
+.Template3_Scheme3_Award_Details_Header
+{
+	
+	font-size:22px;
+	color:#fff;
+	font-weight:800;
+	background-color: #4b3107;
+}
+
+/* Theme 1 - Scheme3 - Recommendation */
+.Template3_Scheme3_Recommendation
+{
+	width:100%;
+	float:left;
+	/*background-color:#10A0A0;*/
+}
+
+.Template3_Scheme3_Recommendation .Template1_Scheme_Recommendations_Title
+{
+	
+	font-size:40px; font-weight:400;
+	color:#009999;
+	float:left;
+	width: 99%;
+	padding:10px 0px 10px 10px;
+	text-transform:uppercase;
+		border-bottom: 2px solid #009999;
+}
+.Template3_Scheme3_Recommendation .Template1_Scheme_Recommendations_Left
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme3_Recommendation .Template1_Scheme_Recommendations_Right
+{
+	
+	font-size:16px;
+	color:#666;
+	float:left;
+	width:98%;
+	padding:10px 0px 20px 10px;
+}
+.Template3_Scheme3_Recommendation .Template1_Scheme_Recommendations_Left_Name
+{
+	padding-top:10px;
+}
+.Template3_Scheme3_Recommendation .Template1_Scheme_Recommendations_Right_Name
+{
+	padding-top:10px;
+}

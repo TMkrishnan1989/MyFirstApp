@@ -1,0 +1,734 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Accenture Resume Builder</title>
+
+	<link href="/assets/css.css" rel="stylesheet">
+
+	
+
+    <link href="/assets/ThemeThree.css" rel="stylesheet">
+
+
+<body>
+	
+	<div id="body">
+		<section class="content-wrapper main-content clear-fix">
+			
+
+
+<div id="divSuccessMessage" class="SaveSuccessMessage" style="display: none; position: absolute; top: 0px; z-index: 999;">
+</div>
+<div id="divErrorMessage" class="ErrorMessage" style="display: none; position: absolute; top: 0px; z-index: 999;">
+</div>
+<div>
+
+    <div id="dvLoading" style="width: 962px; display: none; top: 0px;"></div>
+    <div id="Details" style="float: left; background-color: #FFF; width: 100%;">
+
+        <div id="ProfileData" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="CssContainer">
+    <div id="main-wrapper" style="cursor: move; z-index: 900; top: 44px; left: 0px;" class="ui-widget-content ui-draggable">
+        <div id="wrapper-Message" style="position: absolute; top: -25px;"></div>
+        <div id="tabs">
+            <ul class="tabList">
+                <li class="active"><a href="#tab-1">Profile Summary</a></li>
+                <li><a href="#tab-2">Experience and Education</a></li>
+                <li><a href="#tab-3">Profile Details</a></li>
+                <li><a href="#tab-4">Templates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li style="float: right;">
+                    <span id="profileClose" title="Close" class="close" style="float: right; font-weight: bold; color: #008899; width: 25px; cursor: pointer; text-align: center; margin-top: 5px;">X</span>
+                </li>
+            </ul>
+            <img src="http://166.78.23.38/ResumeBuilder21/Images/move-cursor.png" style="position: absolute; right: 0px; top: 32px;" title="Click to drag and preview the changes in the background">
+
+            <div id="tab-container" class="tabcontainer" style="cursor: auto">
+                <div id="tab-1" class="tab-content" style="display: block;">
+                    <span class="info">Edit your personal information here.</span><br>
+                    
+                    <div id="CreatePersonContainer">
+<style>
+	#frmPerson input[type="button"]
+    {
+        font-family: rotissansserifregular !important;
+    }
+    #frmPerson input[type="text"]
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 0 none;
+        float: left;
+        font-size: 14px;
+        height: 20px;
+        padding: 5px;
+        width: 300px;
+    }
+	.tbl2Row label
+	{
+		width:100px !important;
+		padding:0px !important;
+		position:relative !important;
+		top:-10px !important;
+		left:10px !important;
+	}
+	.tbl2Row select
+	{
+		margin-top:6px;
+		padding:5px !important;
+	}
+	.tbl2Row .field-validation-error
+	{
+		position:absolute !important;
+		left:0px !important;
+		top:18px !important;
+	}
+	.email .field-validation-error
+	{
+		left: 379px !important;
+		position: absolute !important;
+		right: 0 !important;
+		top: 65px !important;
+		width:110px !important;
+	}
+</style>
+
+<form id="frmPerson">
+    <table border="1" style="border: 1px;">
+       
+        <tbody><tr>
+            <td style="width: 10%">
+            <div style="font-size: large; font-weight: bold; padding-bottom: 5px; color: #333333;">Profile Photo</div>
+<img id="ProfilePhoto" src="http://166.78.23.38/ResumeBuilder21/Images/Photo.png" width="115" height="115">
+                <div id="divEditPhoto" style="height: 20px; color: rgb(255, 255, 255); text-align: center; width: 110px; padding-left: 5px; margin-top: -3px; background-color: rgb(102, 102, 102);"><a id="EditPhoto" style="color: #fff; width: 100%;" onclick="LoadFilePartialView()" href="#"><u>Change Photo</u></a></div>
+                <input type="button" value="Upload" id="btnUpload" style="width: 116px; padding: 0px; margin: 0px; display: none;" onclick="LoadFilePartialView()">
+            </td>
+            <td style="vertical-align: top;">
+                <div id="divNameSection" style="position: relative; height: 163px; left: 10px;">
+                    <table style="margin-top:23px;margin-left:0px;">
+                        <tbody><tr>
+                            <td style="width: 10%; padding-right: 15px; padding-top: 4px;">
+                                <select id="Salutation" style="width:80px;height:30px;">
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Miss.">Miss</option>
+                                </select>
+                                <span class="field-validation-valid" data-valmsg-for="Salutation" data-valmsg-replace="true"></span>
+                            </td>
+                            <td style="width: 24%;"><input data-val="true" data-val-length="The field First Name must be a string with a minimum length of 1 and a maximum length of 50." data-val-length-max="50" data-val-length-min="1" data-val-required="First Name is required." id="FirstName" maxlength="40" name="FirstName" onblur="HideValidator(this)" style="width:123px !important;" type="text" value="Muthukrishnan">
+                            </td>
+                            <td style="padding-left: 15px;"><input data-val="true" data-val-length="The field Last Name must be a string with a minimum length of 1 and a maximum length of 50." data-val-length-max="50" data-val-length-min="1" data-val-required="Last Name is required." id="LastName" maxlength="40" name="LastName" onblur="HideValidator(this)" style="width:123px !important; padding-left:5px;" type="text" value="Thiyagarajan">
+                            </td>
+                            <td>
+								<span id="MandatoryMessage" style="color: #E80C4D;font-size: 12px;position:absolute;left:0px;top:0px;">(<span style="font-size: large;position:relative;top:5px;">*</span>) Indicates mandatory fields</span>	
+								<span id="FirstNameMandatory" style="color: #E80C4D;font-size: large;position:absolute;left:85px;top:35px;">*</span>	
+								<span id="SecondNameMandatory" style="color: #E80C4D;font-size: large;position:absolute;left:233px;top:35px;">*</span>	
+								<span id="EmailMandatory" style="color: #E80C4D;font-size: large;position:absolute;left:85px;top:70px;">*</span>
+								<span id="rfvFirstName" style="display:none;color: #E80C4D;font-size: 12px;position:absolute;left:379px;top:25px;">First Name is required.</span>	
+								<span id="rfvLastName" style="display:none;color: #E80C4D;font-size: 12px;position:absolute;left:379px;top:45px;">Last Name is required.</span>	
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="EmailAddress" style="width: 50px; padding-left: 0;">E-mail</label></td>
+                            <td colspan="3" class="email"><input data-val="true" data-val-email="The E-mail field is not a valid e-mail address." data-val-length="The field E-mail must be a string with a minimum length of 1 and a maximum length of 100." data-val-length-max="100" data-val-length-min="1" data-val-required="E-mail is required." id="EmailAddress" maxlength="100" name="EmailAddress" style="width: 271px;margin-top: 0px;" type="text" value="tmuthukrishnanmca@gmail.com">
+                                <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                            </td>
+                        </tr>
+						<tr>
+                            <td><label style="width: 50px; padding-left: 0;">Birth&nbsp;Date</label></td>
+                            <td colspan="3" style="position:absolute;">
+								 <select id="ddlMonth" style="width:95px;">
+                                    <option value="">Month</option>
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December">December</option>
+                                </select>
+								<select id="ddlDay" style="margin-left:10px;width:75px;">
+									<option value="">Day</option>
+								<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+								<select id="ddlYear" style="margin-left:10px;width:90px;">
+									<option value="">Year</option>
+								<option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option></select>
+								<span id="regDOB" style="display:none;width:100px;position:absolute;left:285px;color: #E80C4D;font-size: 12px;">Invalid Birth Date.</span>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                   
+                </div>
+            </td>
+        </tr>
+        
+        <tr style="height: 25px;">
+            <td></td>
+            <td></td>
+        </tr>
+		<tr>
+			<td colspan="2">
+				<table border="0" style="line-height:48px;" class="tbl2Row">
+					<tbody><tr style="display: none;">
+						<td colspan="2"><label for="PhotoPath">PhotoPath</label></td>
+						<td colspan="2"><input data-val="true" data-val-length="The field PhotoPath must be a string with a minimum length of 1 and a maximum length of 300." data-val-length-max="300" data-val-length-min="1" id="PhotoPath" maxlength="300" name="PhotoPath" type="text" value="/Images/Photo.png">
+							<span class="field-validation-valid" data-valmsg-for="PhotoPath" data-valmsg-replace="true"></span></td>
+					</tr>
+					<tr>
+						<td><label for="WorkTitle">Job Title</label></td>
+						<td><input data-val="true" data-val-length="The field Job Title must be a string with a minimum length of 1 and a maximum length of 150." data-val-length-max="150" data-val-length-min="1" id="WorkTitle" maxlength="150" name="WorkTitle" style="width:175px !important;" type="text" value="Tech project associate">
+							<span class="field-validation-valid" data-valmsg-for="WorkTitle" data-valmsg-replace="true"></span></td>
+					
+						<td><label for="CountryID">Country</label></td>
+						
+						
+						<td><select id="Country" name="CountryID" onchange="getStateByCountry(this.value)" style="width:185px;"><option value="1">Afghanistan</option>
+<option value="2">Albania</option>
+<option value="3">Algeria</option>
+<option value="4">American Samoa</option>
+<option value="5">Andorra</option>
+<option value="6">Angola</option>
+<option value="7">Anguilla</option>
+<option value="8">Antarctica</option>
+<option value="9">Antigua and Barbuda</option>
+<option value="10">Argentina</option>
+<option value="11">Armenia</option>
+<option value="12">Aruba</option>
+<option value="13">Australia</option>
+<option value="14">Austria</option>
+<option value="15">Azerbaijan</option>
+<option value="16">Bahrain</option>
+<option value="17">Bangladesh</option>
+<option value="18">Barbados</option>
+<option value="19">Belarus</option>
+<option value="20">Belgium</option>
+<option value="21">Belize</option>
+<option value="22">Benin</option>
+<option value="23">Bermuda</option>
+<option value="24">Bhutan</option>
+<option value="25">Bolivia</option>
+<option value="26">Bosnia and Herzegovina</option>
+<option value="27">Botswana</option>
+<option value="28">Bouvet Island</option>
+<option value="29">Brazil</option>
+<option value="30">British Indian Ocean Territory</option>
+<option value="31">Virgin Islands, British</option>
+<option value="32">Brunei Darussalam</option>
+<option value="33">Bulgaria</option>
+<option value="34">Burkina Faso</option>
+<option value="35">Myanmar</option>
+<option value="36">Burundi</option>
+<option value="37">Cambodia</option>
+<option value="38">Cameroon</option>
+<option value="39">Canada</option>
+<option value="40">Cape Verde</option>
+<option value="41">Cayman Islands</option>
+<option value="42">Central African Republic</option>
+<option value="43">Chad</option>
+<option value="44">Chile</option>
+<option value="45">China</option>
+<option value="46">Christmas Island</option>
+<option value="47">Cocos (Keeling) Islands</option>
+<option value="48">Colombia</option>
+<option value="49">Comoros</option>
+<option value="50">Congo, The Democratic Republic of the</option>
+<option value="51">Congo</option>
+<option value="52">Cook Islands</option>
+<option value="53">Costa Rica</option>
+<option value="54">Côte d'Ivoire</option>
+<option value="55">Croatia</option>
+<option value="56">Cuba</option>
+<option value="57">Cyprus</option>
+<option value="58">Czech Republic</option>
+<option value="59">Denmark</option>
+<option value="60">Djibouti</option>
+<option value="61">Dominica</option>
+<option value="62">Dominican Republic</option>
+<option value="63">Timor-Leste</option>
+<option value="64">Ecuador</option>
+<option value="65">Egypt</option>
+<option value="66">El Salvador</option>
+<option value="67">Equatorial Guinea</option>
+<option value="68">Eritrea</option>
+<option value="69">Estonia</option>
+<option value="70">Ethiopia</option>
+<option value="71">Falkland Islands (Malvinas)</option>
+<option value="72">Faroe Islands</option>
+<option value="73">Fiji</option>
+<option value="74">Finland</option>
+<option value="75">France</option>
+<option value="76">French Guiana</option>
+<option value="77">French Polynesia</option>
+<option value="78">French Southern Territories</option>
+<option value="79">Gabon</option>
+<option value="80">Georgia</option>
+<option value="81">Germany</option>
+<option value="82">Ghana</option>
+<option value="83">Gibraltar</option>
+<option value="84">Greece</option>
+<option value="85">Greenland</option>
+<option value="86">Grenada</option>
+<option value="87">Guadeloupe</option>
+<option value="88">Guam</option>
+<option value="89">Guatemala</option>
+<option value="90">Guinea</option>
+<option value="91">Guinea-Bissau</option>
+<option value="92">Guyana</option>
+<option value="93">Haiti</option>
+<option value="94">Heard Island and McDonald Islands</option>
+<option value="95">Holy See (Vatican City State)</option>
+<option value="96">Honduras</option>
+<option value="97">Hong Kong</option>
+<option value="98">Hungary</option>
+<option value="99">Iceland</option>
+<option selected="selected" value="100">India</option>
+<option value="101">Indonesia</option>
+<option value="102">Iran, Islamic Republic of</option>
+<option value="103">Iraq</option>
+<option value="104">Ireland</option>
+<option value="105">Israel</option>
+<option value="106">Italy</option>
+<option value="107">Jamaica</option>
+<option value="108">Japan</option>
+<option value="109">Jordan</option>
+<option value="110">Kazakhstan</option>
+<option value="111">Kenya</option>
+<option value="112">Kiribati</option>
+<option value="113">Korea, Democratic People's Republic of</option>
+<option value="114">Korea, Republic of</option>
+<option value="115">Kuwait</option>
+<option value="116">Kyrgyzstan</option>
+<option value="117">Lao People's Democratic Republic</option>
+<option value="118">Latvia</option>
+<option value="119">Lebanon</option>
+<option value="120">Lesotho</option>
+<option value="121">Liberia</option>
+<option value="122">Libyan Arab Jamahiriya</option>
+<option value="123">Liechtenstein</option>
+<option value="124">Lithuania</option>
+<option value="125">Luxembourg</option>
+<option value="126">Macao</option>
+<option value="127">Macedonia, Republic of</option>
+<option value="128">Madagascar</option>
+<option value="129">Malawi</option>
+<option value="130">Malaysia</option>
+<option value="131">Maldives</option>
+<option value="132">Mali</option>
+<option value="133">Malta</option>
+<option value="134">Marshall Islands</option>
+<option value="135">Martinique</option>
+<option value="136">Mauritania</option>
+<option value="137">Mauritius</option>
+<option value="138">Mayotte</option>
+<option value="139">Mexico</option>
+<option value="140">Micronesia, Federated States of</option>
+<option value="141">Moldova</option>
+<option value="142">Monaco</option>
+<option value="143">Mongolia</option>
+<option value="144">Montserrat</option>
+<option value="145">Morocco</option>
+<option value="146">Mozambique</option>
+<option value="147">Namibia</option>
+<option value="148">Nauru</option>
+<option value="149">Nepal</option>
+<option value="150">Netherlands Antilles</option>
+<option value="151">Netherlands</option>
+<option value="152">New Caledonia</option>
+<option value="153">New Zealand</option>
+<option value="154">Nicaragua</option>
+<option value="155">Niger</option>
+<option value="156">Nigeria</option>
+<option value="157">Niue</option>
+<option value="158">Norfolk Island</option>
+<option value="159">Northern Mariana Islands</option>
+<option value="160">Norway</option>
+<option value="161">Oman</option>
+<option value="162">Pakistan</option>
+<option value="163">Palau</option>
+<option value="164">Palestinian Territory, Occupied</option>
+<option value="165">Panama</option>
+<option value="166">Papua New Guinea</option>
+<option value="167">Paraguay</option>
+<option value="168">Peru</option>
+<option value="169">Philippines</option>
+<option value="170">Pitcairn</option>
+<option value="171">Poland</option>
+<option value="172">Portugal</option>
+<option value="173">Puerto Rico</option>
+<option value="174">Qatar</option>
+<option value="175">Romania</option>
+<option value="176">Russian Federation</option>
+<option value="177">Rwanda</option>
+<option value="178">Reunion</option>
+<option value="179">Saint Helena</option>
+<option value="180">Saint Kitts and Nevis</option>
+<option value="181">Saint Lucia</option>
+<option value="182">Saint Pierre and Miquelon</option>
+<option value="183">Saint Vincent and the Grenadines</option>
+<option value="184">Samoa</option>
+<option value="185">San Marino</option>
+<option value="186">Saudi Arabia</option>
+<option value="187">Senegal</option>
+<option value="188">Seychelles</option>
+<option value="189">Sierra Leone</option>
+<option value="190">Singapore</option>
+<option value="191">Slovakia</option>
+<option value="192">Slovenia</option>
+<option value="193">Solomon Islands</option>
+<option value="194">Somalia</option>
+<option value="195">South Africa</option>
+<option value="196">South Georgia and the South Sandwich Islands</option>
+<option value="197">Spain</option>
+<option value="198">Sri Lanka</option>
+<option value="199">Sudan</option>
+<option value="200">Suriname</option>
+<option value="201">Svalbard and Jan Mayen</option>
+<option value="202">Swaziland</option>
+<option value="203">Sweden</option>
+<option value="204">Switzerland</option>
+<option value="205">Syrian Arab Republic</option>
+<option value="206">Sao Tome and Principe</option>
+<option value="207">Taiwan</option>
+<option value="208">Tajikistan</option>
+<option value="209">Tanzania, United Republic of</option>
+<option value="210">Thailand</option>
+<option value="211">Bahamas</option>
+<option value="212">Gambia</option>
+<option value="213">Togo</option>
+<option value="214">Tokelau</option>
+<option value="215">Tonga</option>
+<option value="216">Trinidad and Tobago</option>
+<option value="217">Tunisia</option>
+<option value="218">Turkey</option>
+<option value="219">Turkmenistan</option>
+<option value="220">Turks and Caicos Islands</option>
+<option value="221">Tuvalu</option>
+<option value="222">Uganda</option>
+<option value="223">Ukraine</option>
+<option value="224">United Arab Emirates</option>
+<option value="225">United Kingdom</option>
+<option value="226">United States Minor Outlying Islands</option>
+<option value="227">United States</option>
+<option value="228">Uruguay</option>
+<option value="229">Uzbekistan</option>
+<option value="230">Vanuatu</option>
+<option value="231">Venezuela</option>
+<option value="232">Viet Nam</option>
+<option value="233">Virgin Islands, U.S.</option>
+<option value="234">Wallis and Futuna</option>
+<option value="235">Western Sahara</option>
+<option value="236">Yemen</option>
+<option value="237">Serbia and Montenegro</option>
+<option value="238">Zambia</option>
+<option value="239">Zimbabwe</option>
+<option value="240">Åland Islands</option>
+<option value="241">Serbia</option>
+<option value="242">Montenegro</option>
+<option value="243">Jersey</option>
+<option value="244">Guernsey</option>
+<option value="245">Isle of Man</option>
+</select>
+							<span class="field-validation-valid" data-valmsg-for="CountryID" data-valmsg-replace="true"></span></td>
+					</tr>
+					<tr>
+						<td><label for="CityName">City</label></td>
+						<td><input data-val="true" data-val-length="The field City must be a string with a minimum length of 1 and a maximum length of 50." data-val-length-max="50" data-val-length-min="1" id="CityName" maxlength="20" name="CityName" style="width:175px !important;" type="text" value="Chennai">
+							<span class="field-validation-valid" data-valmsg-for="CityName" data-valmsg-replace="true"></span></td>
+					
+						<td><label for="StateId">State</label></td>
+						<td><select id="State" name="StateId" style="width:185px;"><option value="0">Please Select</option><option value="102">Andaman and Nicobar Islands</option><option value="76">Andhra Pradesh</option><option value="77">Arunachal Pradesh</option><option value="78">Assam</option><option value="79">Bihar</option><option value="80">Chhattisgarh</option><option value="103">Dadra and Nagar Haveli</option><option value="104">Daman and Diu</option><option value="105">Delhi</option><option value="81">Goa</option><option value="82">Gujarat</option><option value="83">Haryana</option><option value="84">Himachal Pradesh</option><option value="85">Jammu and Kashmir</option><option value="86">Jharkhand</option><option value="75">Karnataka</option><option value="87">Kerala</option><option value="106">Lakshadweep</option><option value="88">Madhya Pradesh</option><option value="74">Maharashtra</option><option value="89">Manipur</option><option value="90">Meghalaya</option><option value="91">Mizoram</option><option value="92">Nagaland</option><option value="93">Orissa</option><option value="107">Pondicherry</option><option value="94">Punjab</option><option value="95">Rajasthan</option><option value="96">Sikkim</option><option value="97" selected="selected">Tamil Nadu</option><option value="98">Tripura</option><option value="100">Uttar Pradesh</option><option value="99">Uttaranchal</option><option value="101">West Bengal</option></select>
+							<span class="field-validation-valid" data-valmsg-for="StateId" data-valmsg-replace="true"></span></td>
+					</tr>
+					<tr>
+						<td><label for="Address">Address</label></td>
+						<td><input data-val="true" data-val-length="The field Address must be a string with a minimum length of 1 and a maximum length of 1000." data-val-length-max="1000" data-val-length-min="1" id="Address" maxlength="1000" name="Address" style="width:175px !important;" type="text" value="Plot no. 531, Flat no. S2, Life time homes, Sivaraman street, Ramnagar north, Madipakkam, Chennai -91">
+							<span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span></td>
+					
+						<td><label for="Pincode">Pin Code</label></td>
+						<td style="position:absolute;"><input autocomplete="off" data-val="true" data-val-length="The field Pin Code must be a string with a minimum length of 1 and a maximum length of 10." data-val-length-max="10" data-val-length-min="1" data-val-regex="Invalid Pin code." data-val-regex-pattern="^[0-9]{6}$" id="Pincode" maxlength="10" name="Pincode" style="width:175px !important;position:absolute;z-index: 999;" type="text" value="600091">
+							<span class="field-validation-valid" data-valmsg-for="Pincode" data-valmsg-replace="true"></span></td>
+					</tr>
+					<tr>
+						<td><label for="Mobile">Mobile No.</label></td>
+						<td style="position:absolute;"><input data-val="true" data-val-length="The field Mobile No. must be a string with a minimum length of 10 and a maximum length of 25." data-val-length-max="25" data-val-length-min="10" data-val-regex="Invalid Mobile No." data-val-regex-pattern="^([\s\d\+\,\-]){10,25}$" id="Mobile" maxlength="25" name="Mobile" style="width:175px !important;position:absolute;z-index: 999;" type="text" value="8526042996">
+							<span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="true"></span></td>
+					
+						<td><label for="Landline">Landline No.</label></td>
+						<td style="position:absolute;"><input data-val="true" data-val-length="The field Landline No. must be a string with a minimum length of 5 and a maximum length of 25." data-val-length-max="25" data-val-length-min="5" data-val-regex="Invalid Landline No." data-val-regex-pattern="^([\s\d\+\,\-]){5,25}$" id="Landline" maxlength="25" name="Landline" style="width:175px !important;position:absolute;z-index: 999;" type="text" value="">
+							<span class="field-validation-valid" data-valmsg-for="Landline" data-valmsg-replace="true"></span></td>
+					</tr>
+					<tr>
+						<td><label for="AboutMe">About Me</label></td>
+						<td colspan="3"><input data-val="true" data-val-length="The field About Me must be a string with a minimum length of 1 and a maximum length of 2000." data-val-length-max="2000" data-val-length-min="1" id="AboutMe" maxlength="2000" name="AboutMe" style="width:300px !important;" type="text" value="2+ year experience in Ruby on rails">
+							<span class="field-validation-valid" data-valmsg-for="AboutMe" data-valmsg-replace="true"></span>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+        <tr>
+            <td></td>
+            <td>
+                <div class="actions">
+                    <input type="button" value="Save" onclick="return SavePersonFromUI(false);">
+                    <input type="button" value="Next" onclick="SavePersonFromUI(true);">
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+</div>
+        <div id="ChangePassword" style="display: none; position: absolute; top: 80px; background: none 0px 0px repeat scroll rgb(203, 204, 204);">
+        </div>
+
+    
+    <div id="CandidateProfile"><div id="divProfileDetails" style="width: 980px; float: left; padding-bottom: 28px;background-color: #004962;" class="Template3_Scheme2_Profile">
+            <div style="width: 74%; float: left; margin-left: 15px;">
+                <div id="Name" class="Template1_Scheme_Profile_CandidateName"><b><img alt="Dobkin Script Regular" src="http://txt-dynamic.static.1001fonts.net/txt/dHRmLjg4LmM0MzIwZS5UWFYwYUhWcmNtbHphRzVoYmcsLC4wAA,,/dobkin-script.regular.png" style="width: auto;"></b> <img alt="Dobkin Script Regular" src="http://txt-dynamic.static.1001fonts.net/txt/dHRmLjg4LmM0MzIwZS5WR2hwZVdGbllYSmhhbUZ1LjAA/dobkin-script.regular.png" style="width: auto;"></div>
+                <div id="Exprience" class="Template1_Scheme_Profile_Exprience">Tech project associate</div>
+                <div id="Photo">
+                    <img id="imgPhoto" style="height: 95px; width: 90px" alt="Not Found" src="/assets/MyPhoto.jpg">
+                </div>
+                <div id="Abount" class="Template1_Scheme_Profile_About">2+ year experience in Ruby on rails</div>
+            </div>
+            <div style="float: right; padding-right: 20px; padding-top: 20px; width: 22%">
+                <div id="divContactDetails" class="Template1_Scheme_Profile_ContactDetails"><div id="ContactDetails" style="display: block;">Plot no. 531, Flat no. S2, Life time homes, Sivaraman street, Ramnagar north, Madipakkam, Chennai -91<br>Chennai - 600091<br>Tamil Nadu, India</div><div id="divEmailAddress">tmuthukrishnanmca@gmail.com</div><div id="divDOB" style="display: none;">Birth Date - </div><b id="contact">Contact Details - </b><div id="Phone">Mobile - 8526042996<br></div><div id="Websites">
+
+
+                        <a id="LinkedIn" href="https://www.linkedin.com/pub/muthukrishnan-thiyagarajan/92/221/687" target="_blank" style="text-decoration: none;" linkid="34438">
+                            <img id="imgLinkedIn" alt="LinkedIn" src="http://166.78.23.38/ResumeBuilder21/Images/linkedIn-icon.png" title="LinkedIn">
+                        </a>
+                        <a id="Twitter" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgTwitter" alt="Twitter" src="http://166.78.23.38/ResumeBuilder21/Images/twitter-icon.png" title="Twitter">
+                        </a>
+                        <a id="Rss" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgrss" alt="Rss" src="http://166.78.23.38/ResumeBuilder21/Images/RSS-icon.png" title="Rss">
+                        </a>
+                        <a id="facebook" href="https://www.facebook.com/TKMuthu1989" target="_blank" style="text-decoration: none;" linkid="34437">
+                            <img id="imgfacebook" alt="facebook" src="http://166.78.23.38/ResumeBuilder21/Images/fb-icon.png" title="facebook">
+                        </a>
+                        <a id="blog" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgBlog" alt="Blog" src="http://166.78.23.38/ResumeBuilder21/Images/Links/2/Blog.png" title="Blog">
+                        </a>
+                        <a id="mySites" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgMysite" alt="My Sites" src="http://166.78.23.38/ResumeBuilder21/Images/Links/2/Personal.png" title="My Sites">
+                        </a>
+                        <a id="Company" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgcompany" alt="Company" src="http://166.78.23.38/ResumeBuilder21/Images/Links/2/Company.png" title="Company">
+                        </a>
+                        <a id="Other" href="#" target="_blank" style="display: none; text-decoration: none;">
+                            <img id="imgOther" alt="Other" src="http://166.78.23.38/ResumeBuilder21/Images/Links/2/Other.png" title="Other">
+                        </a>
+                    </div></div>
+            </div>
+        </div><div id="divWorkExperience" style="height: 405px; float: left; width: 100%;" class="hasSVG">
+        <svg version="1.1" width="100%" height="405"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">WORK EXPERIENCE</text><line x1="20" y1="65" x2="98%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line><path d="M0,100L1000,100" id="tempPath"></path><path d="M0,100L1000,100" id="tempPath"></path><path d="M380.4861111111111,150L780.4861111111111,150" id="WorkHeaderPath0"></path><path d="M380.4861111111111,222L780.4861111111111,222" id="WorkDetailsPath0"></path><text id="textWorkHeaderPathTemp0" font-family="rotissansserifregular" font-size="30px" font-weight="normal" fill="rgb(0, 51, 68)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#WorkHeaderPathTemp0"><tspan x="0" dy="0">QDXSoft  </tspan><tspan x="0" dy="24">solutions private  </tspan><tspan x="0" dy="24">limited   </tspan></textPath></text><path d="M283.4861111111111,150L683.4861111111111,150" id="WorkHeaderPathTemp0"></path><text id="textWorkDetailsPathTemp0" font-family="rotissansserifregular" font-size="14px" font-weight="normal" fill="rgb(102, 102, 102)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#WorkDetailsPathTemp0"><tspan x="0" dy="0">Tech Project Associate   </tspan></textPath></text><path d="M283.4861111111111,222L683.4861111111111,222" id="WorkDetailsPathTemp0"></path><text id="textWorkDetailsPathTempYear0" font-family="rotissansserifregular" font-size="14px" font-weight="normal" fill="rgb(102, 102, 102)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#WorkDetailsPathTempYear0"><tspan x="0" dy="0">1/2013 - 5/2015   </tspan></textPath></text><path d="M283.4861111111111,240L683.4861111111111,240" id="WorkDetailsPathTempYear0"></path><line x1="34.43055725097656" y1="334" x2="726.5416870117188" y2="334" id="WorkHeaderPathWorkHorizontalLine0" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="1"></line><path d="M32.43055725097656,335L52.43055725097656,305L72.43055725097656,330L97.43055725097656,295L122.43055725097656,330L127.43055725097656,325L132.43055725097656,330L157.43055725097656,295L182.43055725097656,330L194.93055725097656,315L207.43055725097656,330L247.43055725097656,290L287.43055725097656,330L307.43055725097656,305L327.43055725097656,330L339.93055725097656,315L352.43055725097656,330L377.43055725097656,295L402.43055725097656,330L422.43055725097656,305L442.43055725097656,330L454.93055725097656,315L467.43055725097656,330L507.43055725097656,290L547.4305572509766,330L559.9305572509766,315L572.4305572509766,330L612.4305572509766,290L652.4305572509766,330L677.4305572509766,295L702.4305572509766,330L715.4861221313477,290L728.5416870117188,335" id="WorkHeaderPathWorkPath0" fill="rgb(0, 51, 68)" stroke="none" stroke-width="0"></path><line x1="380.4861145019531" y1="245" x2="380.4861145019531" y2="315" id="WorkHeaderPathWorkVerticalLine0" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><line x1="20" y1="345" x2="915" y2="345" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><line x1="20" y1="345" x2="20" y2="365" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="10" y="375" font-family="rotissansserifregular" font-size="12px" fill="rgb(0, 0, 0)" font-weight="normal">2013</text><line x1="318.3333333333333" y1="345" x2="318.3333333333333" y2="365" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="308.3333333333333" y="375" font-family="rotissansserifregular" font-size="12px" fill="rgb(0, 0, 0)" font-weight="normal">2014</text><line x1="616.6666666666666" y1="345" x2="616.6666666666666" y2="365" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="606.6666666666666" y="375" font-family="rotissansserifregular" font-size="12px" fill="rgb(0, 0, 0)" font-weight="normal">2015</text><line x1="915" y1="345" x2="915" y2="365" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="905" y="375" font-family="rotissansserifregular" font-size="12px" fill="rgb(0, 0, 0)" font-weight="normal">2016</text></svg></div><div id="divEducation" style="height: 426px; float: left; width: 100%;" class="hasSVG">
+        <svg version="1.1" width="100%" height="426"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">EDUCATION</text><line x1="20" y1="65" x2="98%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line><path d="M0,100L1000,100" id="tempPath"></path><path d="M0,100L1000,100" id="tempPath"></path><path d="M417.77777777777777,160L857.7777777777778,160" id="EddHeaderPath0"></path><path d="M417.77777777777777,220L857.7777777777778,220" id="EddDetailsPath0"></path><path d="M417.77777777777777,241L857.7777777777778,241" id="EddDetailsPath0"></path><path d="M310.77777777777777,160L750.7777777777778,160" id="EddHeaderPathTemp0"></path><path d="M310.77777777777777,210L750.7777777777778,210" id="EddDetailsPathTemp0"></path><path d="M310.77777777777777,246L750.7777777777778,246" id="EddDetailsPathTempYear0"></path><line x1="158.73611450195312" y1="355" x2="676.8194580078125" y2="355" id="EddHeaderPathWorkHorizontalLine0" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="1"></line><path d="M156.73611450195312,356L196.73611450195312,306L236.73611450195312,351L266.7361145019531,316L296.7361145019531,351L316.7361145019531,326L336.7361145019531,351L376.7361145019531,306L416.7361145019531,351L436.7361145019531,326L456.7361145019531,351L461.7361145019531,346L466.7361145019531,351L506.7361145019531,306L546.7361145019531,351L559.2361145019531,336L571.7361145019531,351L601.7361145019531,316L631.7361145019531,351L644.2361145019531,336L656.7361145019531,351L667.7777862548828,316L678.8194580078125,356" id="EddHeaderPathWorkPath0" fill="rgb(0, 51, 68)" stroke="none" stroke-width="0"></path><path d="M 357.778 256 L 300.778 256 L 300.778 120 L 534.778 120 L 534.778 256 L 417.778 256 L 417.778 301" id="EddHeaderPathDrawShape0" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="0"></path><text x="310.77777099609375" y="160" id="textEddHeaderPathTemp0" font-family="rotissansserifregular" font-size="24px" font-weight="normal" fill="#FFF">Bharathidasan </text><text x="310.77777099609375" y="190" id="textEddHeaderPathTemp0" font-family="rotissansserifregular" font-size="24px" font-weight="normal" fill="#FFF"> University, Trichirapalli</text><text x="310.77777099609375" y="210" id="textEddDetailsPathTemp0" font-family="rotissansserifregular" font-size="16px" font-weight="800" fill="#FFF">Master of Computer </text><text x="310.77777099609375" y="225" id="textEddDetailsPathTemp0" font-family="rotissansserifregular" font-size="16px" font-weight="800" fill="#FFF"> Applications(Computer)</text><text x="310.77777099609375" y="246" id="textEddDetailsPathTempYear0" font-family="rotissansserifregular" font-size="16px" font-weight="800" fill="#FFF">2010 - 2012   </text><line x1="20" y1="366" x2="915" y2="366" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><line x1="20" y1="366" x2="20" y2="386" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="10" y="396" font-family="rotissansserifregular" font-size="12px" fill="rgb(102, 102, 102)" font-weight="normal">2010</text><line x1="318.3333333333333" y1="366" x2="318.3333333333333" y2="386" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="308.3333333333333" y="396" font-family="rotissansserifregular" font-size="12px" fill="rgb(102, 102, 102)" font-weight="normal">2011</text><line x1="616.6666666666666" y1="366" x2="616.6666666666666" y2="386" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="606.6666666666666" y="396" font-family="rotissansserifregular" font-size="12px" fill="rgb(102, 102, 102)" font-weight="normal">2012</text><line x1="915" y1="366" x2="915" y2="386" fill="rgb(102, 102, 102)" stroke="rgb(102, 102, 102)" stroke-width="1"></line><text x="905" y="396" font-family="rotissansserifregular" font-size="12px" fill="rgb(102, 102, 102)" font-weight="normal">2013</text></svg></div><div class="pageBreak" style="background-color:#FFF;height:377px;">&nbsp;</div><div class="pageBreak" style="background-color:#FFF;">&nbsp;</div><div class="pageBreak" style="background-color:#FFF;page-break-before:always;">&nbsp;</div><div id="divSkills" style="height: 418px; float: left; width: 100%;" class="hasSVG">
+        <svg version="1.1" width="100%" height="418"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">SKILLS</text><line x1="20" y1="65" x2="98%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line><g><circle cx="170" cy="250" r="110" fill="none" stroke="rgb(203, 204, 204)" stroke-width="35"></circle><path d="M170,140a60,60 90 1,1 0,220" fill="none" stroke="rgb(221, 68, 17)" stroke-width="35"></path><line x1="40" y1="250" x2="80" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="260" y1="250" x2="300" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="170" y1="120" x2="170" y2="160" fill="none" stroke="#fff" stroke-width="1"></line><line x1="170" y1="340" x2="170" y2="380" fill="none" stroke="#fff" stroke-width="1"></line><text x="109" y="230" font-family="rotissansserifregular" font-size="45px" font-weight="800" fill="rgb(221, 68, 17)">50</text><text id="textSkill20" font-family="rotissansserifregular" font-size="25px" font-weight="normal" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Skill20"><tspan x="0" dy="0">Ruby on Rails   </tspan></textPath></text></g><path d="M0,100L1000,100" id="tempPath"></path><path d="M155,260L475,260" id="SkillTemp20"></path><path d="M109,260L429,260" id="Skill20"></path><g><circle cx="480" cy="250" r="110" fill="none" stroke="rgb(203, 204, 204)" stroke-width="35"></circle><path d="M480,140a60,60 90 1,1 0,220" fill="none" stroke="rgb(221, 68, 17)" stroke-width="35"></path><line x1="350" y1="250" x2="390" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="570" y1="250" x2="610" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="480" y1="120" x2="480" y2="160" fill="none" stroke="#fff" stroke-width="1"></line><line x1="480" y1="340" x2="480" y2="380" fill="none" stroke="#fff" stroke-width="1"></line><text x="455" y="230" font-family="rotissansserifregular" font-size="45px" font-weight="800" fill="rgb(221, 68, 17)">50</text><text id="textSkill330" font-family="rotissansserifregular" font-size="25px" font-weight="normal" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Skill330"><tspan x="0" dy="0">MySql   </tspan></textPath></text></g><path d="M0,100L1000,100" id="tempPath"></path><path d="M155,260L475,260" id="SkillTemp330"></path><path d="M455,260L775,260" id="Skill330"></path><g><circle cx="790" cy="250" r="110" fill="none" stroke="rgb(203, 204, 204)" stroke-width="35"></circle><path d="M790,140a110,110 270 1,1 -110,110" fill="none" stroke="rgb(221, 68, 17)" stroke-width="35"></path><line x1="660" y1="250" x2="700" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="880" y1="250" x2="920" y2="250" fill="none" stroke="#fff" stroke-width="1"></line><line x1="790" y1="120" x2="790" y2="160" fill="none" stroke="#fff" stroke-width="1"></line><line x1="790" y1="340" x2="790" y2="380" fill="none" stroke="#fff" stroke-width="1"></line><text x="763.5" y="230" font-family="rotissansserifregular" font-size="45px" font-weight="800" fill="rgb(221, 68, 17)">75</text><text id="textSkill640" font-family="rotissansserifregular" font-size="25px" font-weight="normal" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Skill640"><tspan x="0" dy="0">jQuery   </tspan></textPath></text></g><path d="M0,100L1000,100" id="tempPath"></path><path d="M155,260L475,260" id="SkillTemp640"></path><path d="M763.5,260L1083.5,260" id="Skill640"></path><text x="30" y="90" font-family="rotissansserifregular" font-size="1em" fill="#333333">0-25 Beginner</text><text x="125" y="90" font-family="rotissansserifregular" font-size="1em" fill="#333333">25-50 Intermediate</text><text x="255" y="90" font-family="rotissansserifregular" font-size="1em" fill="#333333">50-75 Expert</text><text x="345" y="90" font-family="rotissansserifregular" font-size="1em" fill="#333333">75-100 Professional</text></svg></div><div id="divInterests" style="height: 380px; float: left; width: 49%;" class="hasSVG">
+        <svg version="1.1" width="100%" height="340"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">INTERESTS</text><line x1="20" y1="65" x2="98%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line><path d="M0,100L1000,100" id="tempPath"></path><path d="M20,120L520,120" id="Interest1"></path><text id="textInterest1Temp" font-family="rotissansserifregular" font-size="18px" font-weight="800" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Interest1Temp"><tspan x="0" dy="0">Web design   </tspan></textPath></text><path d="M127.5,120L627.5,120" id="Interest1Temp"></path><path d="M30,130.5L351,130.5L366,145L351,159.5L30,159.5" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="0"></path><path d="M305,130L352,130L367,145L352,160L305,160L320,145" fill="#FFF" stroke="#FFF" stroke-width="0"></path><path d="M310,130L347,130L362,145L347,160L310,160L325,145" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="0"></path><text x="30" y="125" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">1</text><text x="346" y="125" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">5</text><path d="M0,100L1000,100" id="tempPath"></path><path d="M20,190L520,190" id="Interest2"></path><text id="textInterest2Temp" font-family="rotissansserifregular" font-size="18px" font-weight="800" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Interest2Temp"><tspan x="0" dy="0">Sports   </tspan></textPath></text><path d="M146,190L646,190" id="Interest2Temp"></path><path d="M30,200.5L351,200.5L366,215L351,229.5L30,229.5" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="0"></path><path d="M305,200L352,200L367,215L352,230L305,230L320,215" fill="#FFF" stroke="#FFF" stroke-width="0"></path><path d="M310,200L347,200L362,215L347,230L310,230L325,215" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="0"></path><text x="30" y="195" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">1</text><text x="346" y="195" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">5</text><path d="M0,100L1000,100" id="tempPath"></path><path d="M20,260L520,260" id="Interest3"></path><text id="textInterest3Temp" font-family="rotissansserifregular" font-size="18px" font-weight="800" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Interest3Temp"><tspan x="0" dy="0">Social Networks   </tspan></textPath></text><path d="M112,260L612,260" id="Interest3Temp"></path><path d="M30,270.5L351,270.5L366,285L351,299.5L30,299.5" fill="rgb(0, 51, 68)" stroke="rgb(0, 51, 68)" stroke-width="0"></path><path d="M244,270L291,270L306,285L291,300L244,300L259,285" fill="#FFF" stroke="#FFF" stroke-width="0"></path><path d="M249,270L286,270L301,285L286,300L249,300L264,285" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="0"></path><text x="30" y="265" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">1</text><text x="346" y="265" font-family="rotissansserifregular" font-size="1em" fill="rgb(221, 68, 17)">5</text></svg></div><div id="divLanguage" style="height: 200px; float: left; width: 49%; padding-left: 2%;" class="hasSVG">
+        <svg version="1.1" width="100%" height="200"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">LANGUAGES</text><line x1="20" y1="65" x2="96%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line><path d="M0,100L1000,100" id="tempPath"></path><text id="textLanguage1" font-family="rotissansserifregular" font-size="18px" font-weight="800" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Language1"><tspan x="0" dy="0">Tamil   </tspan></textPath></text><path d="M20,115L320,115" id="Language1"></path><path d="M216,90L228,126L197,104L235,104L203,126L216,90" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M260,90L272,126L241,104L279,104L247,126L260,90" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M304,90L316,126L285,104L323,104L291,126L304,90" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M348,90L360,126L329,104L367,104L335,126L348,90" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M392,90L404,126L373,104L411,104L379,126L392,90" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M392,90L404,126L373,104L411,104L379,126L392,90M392,90L404,126L373,104L411,104L379,126L392,90" fill="#FFF" stroke="#FFF" stroke-width="0"></path><path d="M0,100L1000,100" id="tempPath"></path><text id="textLanguage2" font-family="rotissansserifregular" font-size="18px" font-weight="800" fill="rgb(221, 68, 17)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Language2"><tspan x="0" dy="0">English   </tspan></textPath></text><path d="M20,165L320,165" id="Language2"></path><path d="M216,140L228,176L197,154L235,154L203,176L216,140" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M260,140L272,176L241,154L279,154L247,176L260,140" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M304,140L316,176L285,154L323,154L291,176L304,140" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M348,140L360,176L329,154L367,154L335,176L348,140" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M348,140L360,176L329,154L367,154L335,176L348,140M348,140L360,176L329,154L367,154L335,176L348,140" fill="#FFF" stroke="#FFF" stroke-width="0"></path><path d="M392,140L404,176L373,154L411,154L379,176L392,140" fill="rgb(221, 68, 17)" stroke="rgb(221, 68, 17)" stroke-width="2"></path><path d="M392,140L404,176L373,154L411,154L379,176L392,140M392,140L404,176L373,154L411,154L379,176L392,140" fill="#FFF" stroke="#FFF" stroke-width="0"></path></svg></div><div id="Award" style="float: left; width: 100%;">
+            <div id="divAwards" style="height: 75px; float: left; width: 100%;" class="hasSVG">
+            <svg version="1.1" width="100%" height="75"><text x="20" y="50" font-family="rotissansserifregular" font-size="40px" font-weight="normal" fill="rgb(221, 71, 38)">AWARDS</text><line x1="20" y1="65" x2="98%" y2="65" fill="rgb(221, 71, 38)" stroke="rgb(221, 71, 38)" stroke-width="2"></line></svg></div>
+            <div id="AwardImages" style="float: left;">
+                <div id="divCupAward" style="height: 200px; width: 185px; float: left; padding-left: 18px;" class="hasSVG"><svg version="1.1" width="200" height="140"><g transform="translate(20.000000,133.000000) scale(0.100000,-0.100000)" fill="rgb(221, 71, 38)" stroke="none"><path d="M479 1250 l-26 -33 -36 28 -37 28 -16 -41 c-17 -43 -29 -48 -60 -25 -30 23 -40 18 -50 -27 l-9 -43 -43 3 -44 4 4 -44 3 -43 -40 -5 c-42 -5 -46 -15 -30 -67 6 -17 3 -24 -11 -29 -11 -3 -29 -10 -42 -15 l-22 -9 24 -39 25 -39 -35 -18 c-19 -10 -34 -23 -34 -29 0 -5 14 -22 32 -38 l33 -27 -32 -30 -33 -30 40 -22 c44 -25 47 -33 25 -62 -24 -32 -18 -44 26 -51 l41 -7 -7 -44 -6 -44 45 0 46 0 0 -46 c0 -38 3 -45 18 -41 58 16 72 17 72 4 0 -13 -86 -216 -115 -270 -8 -16 -15 -37 -15 -46 0 -18 3 -17 57 0 31 11 60 19 64 19 4 0 20 -27 36 -60 15 -33 32 -60 36 -60 4 0 15 17 23 38 41 100 87 208 94 217 4 6 10 22 14 38 8 33 22 35 31 5 4 -13 13 -36 20 -53 15 -33 80 -186 95 -222 5 -13 13 -23 17 -23 5 0 21 27 36 60 16 33 32 60 36 60 4 0 33 -8 64 -19 53 -17 57 -17 57 -2 0 10 -11 39 -24 67 -13 27 -29 66 -35 86 -7 21 -17 40 -22 43 -5 4 -9 14 -9 23 0 10 -9 34 -20 55 -32 59 -28 62 53 40 14 -4 17 3 17 41 l0 46 46 0 45 0 -6 44 -7 44 41 7 c44 7 50 19 26 51 -22 29 -19 37 25 62 l40 22 -33 30 -32 30 33 27 c18 16 32 33 32 38 0 6 -15 19 -34 29 l-35 18 25 39 24 39 -22 9 c-13 5 -31 12 -42 15 -14 5 -17 12 -11 29 16 52 12 62 -30 67 l-40 5 3 43 4 44 -44 -4 -43 -3 -9 43 c-10 45 -20 50 -50 27 -31 -23 -43 -18 -60 25 l-16 41 -36 -28 -37 -27 -27 32 c-14 18 -28 32 -31 32 -2 0 -16 -15 -30 -32z m100 -68 c207 -34 372 -246 345 -444 -21 -160 -107 -277 -250 -343 -52 -24 -71 -27 -164 -27 -93 0 -112 3 -164 27 -143 66 -229 183 -250 343 -26 193 138 410 336 443 74 12 75 12 147 1z"></path><path d="M393 1128 c-60 -19 -104 -49 -157 -106 -72 -77 -90 -126 -91 -245 0-90 3 -106 28 -157 139 -283 535 -283 674 0 25 51 28 68 28 157 0 89 -3 106-28 156 -33 68 -119 152 -184 181 -60 27 -207 35 -270 14z"></path></g></svg><svg version="1.1" width="203" height="50"><path d="M0,100L1000,100" id="tempPath"></path><path d="M10,20L310,20" id="ConsultantAwardTexttemp"></path><rect x="-10" y="0" width="170" height="65" id="ConsultantAwardplotBestEngineeringAwardrec1" fill="rgb(0, 51, 68)" stroke="none" stroke-width="0"></rect><text id="textConsultantAwardText" font-family="rotissansserifregular" font-size="22px" font-weight="800" fill="rgb(255, 255, 255)"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ConsultantAwardText"><tspan x="0" dy="0">Best student   </tspan></textPath></text><path d="M21.5,20L321.5,20" id="ConsultantAwardText"></path><text x="21.5" y="40" id="ConsultantAwardtextMainYear" font-family="rotissansserifregular" font-size="NaN" font-weight="800" fill="rgb(255, 255, 255)">2011</text></svg></div>
+                <div id="divStarAward" style="height: 220px; width: 185px; float: left;"></div>
+                <div id="divBestEngineeringAward" style="height: 200px; width: 185px; float: left;"></div>
+                <div id="divShieldAward" style="height: 220px; width: 185px; float: left;"></div>
+                <div id="divConsultantAward" style="height: 220px; width: 185px; float: left;"></div>
+            </div>
+        </div><div id="divRecommendations" style="display: none; width: 962px;" class="Template3_Scheme2_Recommendation">
+<link href="/ResumeBuilder21/Content/jquery-ui.css" rel="stylesheet">
+
+
+        </div><div id="dummyWorkHeader" style="display: none;" class="Template3_Scheme2_Work_header">&nbsp;</div><div id="dummyWorkTimeLine" style="display: none;" class="Template3_Scheme2_Work_TimeLine">&nbsp;</div><div id="dummyWorkDisplay" style="display: none;" class="Template3_Scheme2_Work_display">&nbsp;</div><div id="dummyWorkDetailsHeader" style="display: none;" class="Template3_Scheme2_Work_Details_Header">&nbsp;</div><div id="dummyWorkDetails" style="display: none;" class="Template3_Scheme2_Work_Details">&nbsp;</div><div id="dummyEducationHeader" style="display: none;" class="Template3_Scheme2_Education_header">&nbsp;</div><div id="dummyEducationTimeLine" style="display: none;" class="Template3_Scheme2_Education_TimeLine">&nbsp;</div><div id="dummyEducationDisplay" style="display: none;" class="Template3_Scheme2_Education_display">&nbsp;</div><div id="dummyEducationDetailsHeader" style="display: none;" class="Template3_Scheme2_Education_Details_Header">&nbsp;</div><div id="dummyEducationDetails" style="display: none;" class="Template3_Scheme2_Education_Details">&nbsp;</div><div id="dummyEducationLines" style="display: none;" class="Template3_Scheme2_Education_line">&nbsp;</div><div id="dummySkillHeader" style="display: none;" class="Template3_Scheme2_Skill_header">&nbsp;</div><div id="dummySkillOuterCircle" style="display: none;" class="Template3_Scheme2_Skill_OuterCircle">&nbsp;</div><div id="dummySkillInnerCircle" style="display: none;" class="Template3_Scheme2_Skill_InnerCircle">&nbsp;</div><div id="dummySkillHighLighter" style="display: none;" class="Template3_Scheme2_Skill_HighLighter">&nbsp;</div><div id="dummySkillDetailsHeader" style="display: none;" class="Template3_Scheme2_Skill_Details_Header">&nbsp;</div><div id="dummyInterestHeader" style="display: none;" class="Template3_Scheme2_Interest_header">&nbsp;</div><div id="dummyInterestNormal" style="display: none;" class="Template3_Scheme2_Interest_Normal">&nbsp;</div><div id="dummyInterestSelected" style="display: none;" class="Template3_Scheme2_Interest_Selected">&nbsp;</div><div id="dummyInterestDetailsHeader" style="display: none;" class="Template3_Scheme2_Interest_Details_Header">&nbsp;</div><div id="dummyLanguageHeader" style="display: none;" class="Template3_Scheme2_Language_header">&nbsp;</div><div id="dummyLanguageNormal" style="display: none;" class="Template3_Scheme2_Language_Normal">&nbsp;</div><div id="dummyLanguageSelected" style="display: none;" class="Template3_Scheme2_Language_Selected">&nbsp;</div><div id="dummyLanguageDetailsHeader" style="display: none;" class="Template3_Scheme2_Language_Details_Header">&nbsp;</div><div id="dummyAwardHeader" style="display: none;" class="Template3_Scheme2_Award_header">&nbsp;</div><div id="dummyAwardBackColor" style="display: none;" class="Template3_Scheme2_Award_BackColor">&nbsp;</div><div id="dummyAwardFrontColor" style="display: none;" class="Template3_Scheme2_Award_FrontColor">&nbsp;</div><div id="dummyAwardDetailsHeader" style="display: none;" class="Template3_Scheme2_Award_Details_Header">&nbsp;</div></div>
+    
+</div>
+
+
+
+
+<!-- SiteCatalyst code version: H.21.a
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var s_account="accactcarprod,accactglobprod"
+var shortenURL = ""
+var domainPrefix = "car"
+var countryLang = "us-en"
+var trackevents = "event20,event30,event69"
+var contentHier = ""
+//-->
+</script>
+
+<script type="text/javascript" language="Javascript1.2">
+	var acnJsHost = (("https:" == document.location.protocol) ?
+	 " https://conv-register." : "http://");
+	document.write(unescape("%3Cscript src='" + acnJsHost
+	+ "accenture.com/_layouts/accenture/scripts/Omniture_s_code.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://accenture.com/_layouts/accenture/scripts/Omniture_s_code.js" type="text/javascript"></script><script type="text/javascript" language="Javascript1.2">
+	var acnJsHost = (("https:" == document.location.protocol) ?
+	 " https://conv-register." : "http://");
+	document.write(unescape("%3Cscript src='" + acnJsHost
+	+ "accenture.com/_layouts/accenture/scripts/OmnitureCustomFunctions.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://accenture.com/_layouts/accenture/scripts/OmnitureCustomFunctions.js" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/javascript"><!--
+s.charSet = "UTF-8"
+s.pageName = "car:jobs:resume-builder"
+s.server = GetServerName()
+s.channel = ""
+s.pageType = ""
+s.prop3 = ""
+s.prop8 = countryLang
+s.prop50 = "desktop-car-3rd"
+/* Conversion Variables */
+s.eVar50 = "D=c50"
+s.campaign = ""
+s.state = ""
+s.zip = ""
+s.events = trackevents
+s.products = ""
+s.purchaseID = ""
+//var s_code=s.t();if(s_code)document.write(s_code)
+//-->
+
+</script>
+
+<!-- End SiteCatalyst code version: H.21. -->
+
+
+
+<noscript>&lt;div id='desktop-noscript' style='display:block'&gt;
+&lt;img src="http://somni.accenture.com/b/ss/accactcarprod,accactglobstage/1/H.21--NS/0/?c18=mobcar%3aus%2Den%3ajobs%3aresume
+
+%2Dbuilder&amp;ev=event21&amp;pe=lnk_d&amp;pev2=noscript" height="1" width="1" border="0" alt="" /&gt;
+&lt;/div&gt;</noscript>
+
+			
+			
+		</section>
+	</div>
+	
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front foo ui-dialog-buttons ui-draggable" tabindex="-1" role="dialog" aria-describedby="SuccessMessageForPDFEmailDialogue" aria-labelledby="ui-id-1" style="display: none; height: 85px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="dialogCloseButton" style="top: -8px; right: 0px; position: absolute; z-index: 99999;">X</span><span class="ui-button-text">close</span></button></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front foo ui-dialog-buttons ui-draggable" tabindex="-1" role="dialog" aria-describedby="MessageDialogTemplate" aria-labelledby="ui-id-2" style="display: none; height: 85px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">&nbsp;</span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="dialogCloseButton" style="top: -8px; right: 0px; position: absolute; z-index: 99999;">X</span><span class="ui-button-text">close</span></button></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all foo" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-Uploadfiles" style="display: none; z-index: 1002; outline: 0px; height: 85px; width: 380px; top: 44px; left: 289px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-Uploadfiles">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="dialogCloseButton" style="top: -8px; right: 0px; position: absolute; z-index: 99999;">X</span></a></div><iframe id="Uploadfiles" src="" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0" style="width: 360px; min-height: 0px; height: 85px; position: absolute; top: 0px; overflow: hidden; padding: 0px; margin: 0px; border: 0px; background-color: rgb(0, 187, 0);"></iframe></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable foo" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-SuccessMessageForPDFEmailDialogue" style="display: none; z-index: 1006; outline: 0px; height: auto; width: 595px; top: 44px; left: 181.5px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-SuccessMessageForPDFEmailDialogue">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="dialogCloseButton" style="top: -8px; right: 0px; position: absolute; z-index: 99999;">X</span></a></div><div id="SuccessMessageForPDFEmailDialogue" style="font-size: 21px; font-family: rotissansserifregular !important; width: auto; min-height: 96.9840002059937px; height: auto;" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
+    <div id="divSuccessMessageContainer">Your infographic resume has been sent to your registered<br>e-mail address.</div>
+    <div style="font-size: 20px; padding-bottom: 20px; padding-top: 20px;">Share Accenture Infographic Resume Builder with your friends.</div>
+
+<div class="icons" style="float: left; width: 137px; padding-top: 9px;">
+
+
+<div id="linkFaceBook" style="display: block; float: left; width: 38px;">
+	<a href="https://www.facebook.com/dialog/feed?app_id=498243170214233&amp;link=http://www.accenture.com/resumebuilder&amp;picture=http://166.78.23.38/ResumeBuilder21/Images/img1.jpg&amp;name=Accenture%20Resume%20Builder&amp;caption=Make%20your%20first%20impression%20even%20more%20impressive!%20Use%20the%20Accenture%20Resume%20Builder%20to%20create%20an%20eye-catching%20resume.&amp;description=%20&amp;redirect_uri=http://166.78.23.38/ResumeBuilderAsia/CandidateAction/CloseFaceBookSharePopup" style="float: left;" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=900');return false;">
+		<img src="http://166.78.23.38/ResumeBuilder21//images/fb-small.png" border="0"></a>
+</div>
+
+
+
+
+<div id="divTemp" class="divTemp" style="float: left; width: 31px;"><img src="http://166.78.23.38/ResumeBuilder21//images/linked-small.png" border="0"></div>
+<div id="linkNetwork" class="linkNetwork" style="display: none; float: left; width: 31px;">
+	<script type="IN/Share" data-url="http://www.accenture.com/resumebuilder" data-counter="none"></script>
+</div>
+
+
+<div id="linktwitter" style="display: block; float: left; width: 34px;">
+	
+	<a href="https://twitter.com/share?url=http://www.accenture.com/resumebuilder&amp;text=Use the Accenture Resume Builder to create an eye catching resume. Go to" rel="nofollow" onclick="MyNewWindow(this.href,'template_window','500','400','yes','center'); return false;" onfocus="this.blur()">
+		<img src="http://166.78.23.38/ResumeBuilder21//images/twitter-small.png" border="0" title="Share on Twitter" alt="Share on Twitter"></a>
+</div>
+
+
+
+<div id="linkGoogleplus" style="display: block; float: left; width: 34px;">
+	<a href="https://plus.google.com/share?url=http://www.accenture.com/resumebuilder" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=900');return false;"><img src="http://166.78.23.38/ResumeBuilder21//images/googlePlus-small.png" alt="Share on Google+" border="0">
+	</a>
+</div>
+</div>
+
+
+</div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all foo" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-Uploadfiles" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-Uploadfiles">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="dialogCloseButton">X</span></a></div><iframe id="Uploadfiles" src="http://166.78.23.38/ResumeBuilder21/CandidateProfile/FilePartial/" class="ui-dialog-content ui-widget-content"></iframe></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all foo ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-MessageDialogTemplate" style="display: none; z-index: 1004; outline: 0px; height: auto; width: 595px; top: 44px; left: 181.5px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-MessageDialogTemplate">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="dialogCloseButton">X</span></a></div><div id="MessageDialogTemplate" style="font-size: 16px; font-family: rotissansserifregular !important; width: auto; min-height: 101.984000205994px; height: auto;" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
+     <div id="divMessageContainer"><table style="font-size: 20px; margin-top:-15px;line-height:22px;"><tbody><tr><td style="padding-right:0px"><span style="font-size:x-large; font-weight:bold;">You've done it!</span><br><br>Your profile has been updated.<br><a onclick="selfCloseAndGetCandidateResumePdf()" href="#" style="color:yellow;float: none !important;padding:0px;">Click here</a> to receive your new, eye-catching resume now!<ul style="list-style: none;padding: 0px;font-size:20px;"><li>For Information Technology opportunities <a style="float:none;color:yellow;float: none;padding:0px;" target="_blank" href="http://careers.accenture.com/in-en/jobs/Pages/jobsearch.aspx?city=Chennai&amp;skill=451&amp;c=car_inresbuil_10000008&amp;n=ilc_0513&amp;SRC=INDRESBUIL08C13">click here.</a></li></ul>To explore other exciting opportunities with Accenture, <a style="float:none;color:yellow;float: none !important;padding:0px;" target="_blank" href="http://careers.accenture.com/in-en/jobs/Pages/jobsearch.aspx?c=car_inresbuil_10000020&amp;n=ilc_0513&amp;SRC=INDRESBUIL20C13">click here.</a></td></tr></tbody></table></div>
+    <div style="font-size: 20px; padding-bottom: 20px; padding-top: 20px;">Share Accenture Infographic Resume Builder with your friends.</div>
+
+<div class="icons" style="float: left; width: 137px; padding-top: 9px;">
+
+
+<div id="linkFaceBook" style="display: block; float: left; width: 38px;">
+	<a href="https://www.facebook.com/dialog/feed?app_id=498243170214233&amp;link=http://www.accenture.com/resumebuilder&amp;picture=http://166.78.23.38/ResumeBuilder21/Images/img1.jpg&amp;name=Accenture%20Resume%20Builder&amp;caption=Make%20your%20first%20impression%20even%20more%20impressive!%20Use%20the%20Accenture%20Resume%20Builder%20to%20create%20an%20eye-catching%20resume.&amp;description=%20&amp;redirect_uri=http://166.78.23.38/ResumeBuilderAsia/CandidateAction/CloseFaceBookSharePopup" style="float: left;" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=900');return false;">
+		<img src="http://166.78.23.38/ResumeBuilder21//images/fb-small.png" border="0"></a>
+</div>
+
+
+
+
+<div id="divTemp" class="divTemp" style="float: left; width: 31px;"><img src="http://166.78.23.38/ResumeBuilder21//images/linked-small.png" border="0"></div>
+<div id="linkNetwork" class="linkNetwork" style="display: none; float: left; width: 31px;">
+	<script type="IN/Share" data-url="http://www.accenture.com/resumebuilder" data-counter="none"></script>
+</div>
+
+
+<div id="linktwitter" style="display: block; float: left; width: 34px;">
+	
+	<a href="https://twitter.com/share?url=http://www.accenture.com/resumebuilder&amp;text=Use the Accenture Resume Builder to create an eye catching resume. Go to" rel="nofollow" onclick="MyNewWindow(this.href,'template_window','500','400','yes','center'); return false;" onfocus="this.blur()">
+		<img src="http://166.78.23.38/ResumeBuilder21//images/twitter-small.png" border="0" title="Share on Twitter" alt="Share on Twitter"></a>
+</div>
+
+
+
+<div id="linkGoogleplus" style="display: block; float: left; width: 34px;">
+	<a href="https://plus.google.com/share?url=http://www.accenture.com/resumebuilder" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=900');return false;"><img src="http://166.78.23.38/ResumeBuilder21//images/googlePlus-small.png" alt="Share on Google+" border="0">
+	</a>
+</div>
+</div>
+
+
+</div></div></body></html>
