@@ -1,0 +1,36 @@
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>Edit a Blog</h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li><a href="<%=root_path%>">Home</a></li>
+                    <li><a href="<%=posts_path%>">Blog</a></li>
+                    <li class="active">Edit Blog</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+<div class="container">
+    
+    <div class="row">
+        <div class="col-lg-7 col-sm-7 address">
+            <div class="bs-example">
+              <h4>
+                Editing a Blog
+              </h4>
+              <%= render 'form' %>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

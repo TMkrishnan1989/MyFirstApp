@@ -757,8 +757,23 @@ h1[id] {
     border-width: 1px 1px;
 }
 
+.bs-example input[type="text"], .bs-example textarea {
+margin-bottom: 15px;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border: 1px solid #eaeaea;
+box-shadow: none;
+resize: none;
+color: #444e67;
+}
+
+.bs-example form{
+    width: auto;
+}
+
 .bs-example:after {
-    content: "Example";
+    
     position: absolute;
     top: 15px;
     left: 15px;

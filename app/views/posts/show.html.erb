@@ -1,0 +1,379 @@
+<!--breadcrumbs start-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <h1>
+              Blog Details
+            </h1>
+          </div>
+          <div class="col-lg-8 col-sm-8">
+            <ol class="breadcrumb pull-right">
+              <li><a href="<%=root_path%>">Home</a></li>
+              <li><a href="<%=posts_path%>">Blog</a></li>
+              <li class="active">
+                Blog Details
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrumbs end-->
+    <!--container start-->
+    <div class="container">
+      <div class="row">
+        <!--blog start-->
+        <div class="col-lg-9">
+          <div class="blog-item">
+            <div class="row">
+              <div class="col-lg-2 col-sm-2">
+                <div class="date-wrap" style="margin: 25px 0 30px 0;">
+                  <span class="date">
+                    <%=@post.created_at.strftime("%d")%>
+                  </span>
+                  <span class="month">
+                    <%=@post.created_at.strftime("%B")%>
+                  </span>
+                </div>
+
+             
+                <div class="author text-right">
+                  By
+                  <a href="#">
+                    Admin
+                  </a>
+                </div>
+                
+                <div class="st-view text-right">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="javascript:;">
+                        209 View
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        23 Share
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        23 comments
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-10 col-sm-10">
+                <h1>
+                  <a href="javascript:;">
+                    <%=@post.title%>
+                  </a>
+                </h1>
+                <p style="text-align: justify;text-justify: inter-word;">
+                  <%=@post.body%>
+                </p>
+                <div class="media">
+                  <h3>
+                    Comments
+                  </h3>
+                  <hr>
+                </div>
+                <%@post.comments.order(id: 'desc').each do |comment|%>
+                  <%if comment.body%>
+                    <div class="media">
+                      <a class="pull-left" href="javascript:;">
+                        <img class="media-object" src="img/person_1.png" alt="">
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+                          <strong></strong><%=comment.post.user.name%></strong>
+                          <span>
+                            |
+                          </span>
+                          <span style='font-size:12px;'>
+                            Commented on <%= time_ago_in_words(comment.created_at) %> ago
+                          </span>
+                        </h4>
+                        <p class="readmore">
+                          <%= comment.body %>
+                        </p>
+                        <!--<a href="javascript:;">
+                          Reply
+                        </a>-->
+                        <hr>
+                        
+                      </div>
+                    </div>
+                  <%end%>
+                <%end%>
+                <div class="post-comment">
+                  <h3 class="skills">
+                    Post Comments
+                  </h3>
+                  <%= form_for([@post, @post.comments.build],html: {class: 'form-horizontal'}) do |f| %>
+                    <div class="form-group">
+                      <div class="col-lg-12">
+                        <%= f.text_area :body, rows: 5, class: 'form-control', placeholder: 'Message' %>
+                        
+                      </div>
+                    </div>
+                    <p>
+                      <button type="submit" class="btn btn-info pull-right">
+                        Post Comment
+                      </button>
+                    </p>
+                  <%end%>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3">
+          <div class="blog-side-item">
+            <div class="search-row">
+              <input type="text" class="form-control" placeholder="Search here">
+            </div>
+            <br>
+            <div class="search-row">
+              <% if user_signed_in? %>
+              <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-success" %>
+              <%end%>
+              <%= link_to 'Back', posts_path, :class => "btn btn-warning" %>
+            </div>
+            <div class="category">
+              <h3>
+                Categories
+              </h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Animals
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Landscape
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Portait
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Wild Life
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Video
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="blog-post">
+              <h3>
+                Latest Blog Post
+              </h3>
+              <div class="media">
+                <a class="pull-left gs" href="javascript:;">
+                  <img class='image' src="img/blog/blog-thumb-1.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+              <div class="media">
+                <a class="pull-left gs" href="javascript:;">
+                  <img class='image' src="img/blog/blog-thumb-2.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+              <div class="media">
+                <a class="pull-left gs" href="javascript:;">
+                  <img class='image' src="img/blog/blog-thumb-3.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tags">
+              <h3>
+                Tags
+              </h3>
+              <ul class="tag">
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    flat
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    clean
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    admin
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    UI
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    responsive
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    UIX
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    flat Admin
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="archive">
+              <h3>
+                Archive
+              </h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    May 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    April 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    March 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    February 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    January 2014
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!--container end-->
+    <script>
+      $(".readmore").readmore({
+        speed:75,
+        collapsedHeight:30
+      });
+    </script>

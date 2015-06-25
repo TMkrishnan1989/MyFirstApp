@@ -1,0 +1,375 @@
+
+
+
+<!--breadcrumbs start-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <h1>
+              Blogs
+            </h1>
+          </div>
+          <div class="col-lg-8 col-sm-8">
+            <ol class="breadcrumb pull-right">
+              <li>
+                <a href="<%=root_path%>">
+                  Home
+                </a>
+              </li>
+              
+              <li class="active">
+                Blog
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrumbs end-->
+
+<!--container start-->
+    <div class="container">
+      <div class="row">
+        <!--blog start-->
+        <div class="col-lg-9 ">
+          
+          <% @posts.each do |post| %>
+            <div class="blog-item">
+              
+              <div class="row">
+                <div class="col-lg-2 col-sm-2">
+                  <div class="date-wrap" style="margin: 25px 0 30px 0;">
+                    <span class="date">
+                      <%=post.created_at.strftime("%d")%>
+                    </span>
+                    <span class="month">
+                      <%=post.created_at.strftime("%B")%>
+                    </span>
+                  </div>
+  
+                  <div class="author text-right">
+                    By
+                    <a href="#">
+                      Admin
+                    </a>
+                  </div>
+                  
+                  <div class="st-view text-right">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="javascript:;">
+                          209 View
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          23 Share
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          15 comments
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-10 col-sm-10 post">
+                  <h1>
+                    <%= link_to post.title, post %>
+                  </h1>
+                  <div style="max-height:202px;overflow: hidden;">
+                    <p style="text-align: justify;text-justify: inter-word;" class="postContent">
+                      <%=post.body%>
+                    </p>
+                  </div>
+                  <br>
+                  <%= link_to 'Continue Reading', post, :class => "btn btn-primary readmoreBtn" %>
+                  <%if current_user && current_user.id == post.user_id%>
+                  <%= link_to 'Edit', edit_post_path(post), :class => "btn btn-success" %>
+                  <%= link_to 'Delete', post, :method=>'delete',data: {confirm: "Are you sure want to delete the post?"}, :class => "btn btn-danger"  %>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+          <%end%>
+
+          <div class="text-center">
+            <ul class="pagination">
+              <li>
+                <a href="#">
+                  «
+                </a>
+              </li>
+              <li class="active">
+                <a href="#">
+                  1
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  3
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  4
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  5
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  »
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3">
+          <div class="blog-side-item">
+            <div class="search-row">
+              <input type="text" class="form-control" placeholder="Search here">
+            </div>
+            <br>
+            <% if user_signed_in? %>
+            <div class="search-row">
+              <%= link_to 'New Blog', new_post_path, :class => "btn btn-success" %>
+            </div>
+            <%end%>
+            <div class="category">
+              <h3>
+                Categories
+              </h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Animals
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Landscape
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Portait
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Wild Life
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-right pr-10">
+                    </i>
+                    Video
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="blog-post">
+              <h3>
+                Latest Blog Post
+              </h3>
+              <div class="media">
+                <a class="pull-left" href="javascript:;">
+                  <img class=" " src="img/blog/blog-thumb-1.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+              <div class="media">
+                <a class="pull-left" href="javascript:;">
+                  <img class=" " src="img/blog/blog-thumb-2.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+              <div class="media">
+                <a class="pull-left" href="javascript:;">
+                  <img class=" " src="img/blog/blog-thumb-3.jpg" alt="">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="javascript:;">
+                      02 May 2014
+                    </a>
+                  </h5>
+                  <p>
+                    Donec id elit non mi porta gravida at eget metus amet int
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tags">
+              <h3>
+                Tags
+              </h3>
+              <ul class="tag">
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    flat
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    clean
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    admin
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    UI
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    responsive
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    UIX
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    flat Admin
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-tags pr-5">
+                    </i>
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="archive">
+              <h3>
+                Archive
+              </h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    May 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    April 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    March 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    February 2014
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <i class="fa fa-angle-double-right pr-10">
+                    </i>
+                    January 2014
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!--blog end-->
+      </div>
+
+    </div>
+    <!--container end-->

@@ -6,10 +6,11 @@
     <meta name="description" content="Developed By M Abdur Rokib Promy">
     <meta name="author" content="cosmic">
     <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
-    <link rel="shortcut icon" href="img/favicon.png">
-
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
     <title>
-      Acme | Home
+      iTrentz - Redefine IT
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -49,36 +50,16 @@
 
   <body>
     <header class="head-section">
-      <div class="navbar navbar-default navbar-fixed-top" style="border-bottom:1.5px solid #48cfad">
+      <div class="navbar navbar-default navbar-fixed-top" style="border-bottom:1.5px solid #48cfad; padding: 0 20px 0 15px;">
           <div class="navbar-header">
               <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"
               type="button"><span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">A
-              <span>cme</span></a>
+              <span class="icon-bar"></span></button> <a class="navbar-brand" style="margin-top:15px;" href="<%=root_path%>"><img src="/assets/Logo.png" alt="Crystal Software" height="56"/></a>
           </div>
 
           <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                  <li class="dropdown">
-                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="index.html">Home <i class="fa fa-angle-down"></i>
-                      </a>
-
-                      <ul class="dropdown-menu">
-                          <li>
-                              <a href="index.html">Home Parallax</a>
-                          </li>
-
-                          <li>
-                              <a href="index1.html">Home Seq-slider1</a>
-                          </li>
-
-                          <li>
-                              <a href="index2.html">Home Seq-slider2</a>
-                          </li>
-
-                      </ul>
-                  </li>
+                  <li><a href="<%=root_url%>">Home</a></li>
 
                   <li class="dropdown">
                       <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
@@ -154,9 +135,7 @@
                               <a href="career.html">career</a>
                           </li>
 
-                          <li>
-                              <a href="login.html">Login</a>
-                          </li>
+                          
 
                           <li>
                               <a href="registration.html">Registration</a>
@@ -181,7 +160,7 @@
                                   </li>
                               </ul>
                           </li>
-
+
                           <li>
                               <a href="service.html">Service</a>
                           </li>
@@ -219,7 +198,7 @@
                           </li>
                       </ul>
                   </li>
-
+<!--
                   <li class="dropdown">
                       <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
                       "dropdown" data-toggle="dropdown" href="#">Blog <i class="fa fa-angle-down"></i>
@@ -243,11 +222,20 @@
                           </li>
                       </ul>
                   </li>
-
+-->
+                  <li>
+                      <%=link_to 'Blog', posts_path%>
+                  </li>
                   <li>
                       <a href="contact.html">Contact</a>
                   </li>
-
+                  <% if user_signed_in? %>
+                    <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+                    <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+                  <% else %>
+                    <li><%= link_to 'Login', new_user_session_path %></li>
+                    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                  <% end %>
                   <li><input class="form-control search" placeholder=" Search" type="text"></li>
               </ul>
           </div>
@@ -257,6 +245,7 @@
 <div style="margin-top:95px">
     
 </div>
+  <%if params[:action] == "index" and params[:controller] == "home"%>
     <!-- Sequence Modern Slider -->
     <div id="sequence-theme" class="sequence-inner">
       <div id="sequence">
@@ -303,6 +292,7 @@
         </ul>
       </div>
     </div>
+    <%end%>
     <!--/sequence-theme-->
     <!-- End of Sequence Modern Slider -->
 
@@ -420,7 +410,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="copyright">
-                    <p>&copy; Copyright - Acme Theme by cosmic.</p>
+                    <p>&copy; Copyright - Crystal Softwares.</p>
                   </div>
                 </div>
             </div>
@@ -507,7 +497,22 @@
 
       new WOW().init();
 
-
+      $('.postContent').each(function(){
+    
+        var pHeight = $(this).css('height');
+        var divHeight = $(this).closest('div').css("height");
+        if(parseInt(pHeight) <= parseInt(divHeight))
+        {
+          $(this).closest('.post').find(".readmoreBtn").hide();
+        }
+        
+      });
+      $(".media-object").error(function(){
+          $(this).attr('src', '/assets/nouser.png').css({"height": 48, "width": 48});
+      });
+      $(".image").error(function(){
+          $(this).attr({'src':'/assets/noimage1.png','height': 32});
+      });
     </script>
   </body>
 </html>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  
+
+  resources :posts do
+    resources :comments
+  end
+
+  get 'blogs/index'
+  resources :blogs
   devise_for :users
   root :to => 'home#index'
   devise_scope :user do
